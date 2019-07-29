@@ -51,6 +51,7 @@ def button():
 		time.sleep(.2)
 	return
 
+#LED logic controller
 def led(count):
 	binS = bin(count)[2:].zfill(3)
 	for index, value in enumerate(binS):
@@ -59,6 +60,25 @@ def led(count):
 		else:
 			LEDOff(index)
 	return
+
+#Turning LED on
+def LEDOn(pin):
+	if (pin == 0):
+		GPIO.output(22,GPIO.HIGH)
+	if (pin == 1):
+		GPIO.output(23,GPIO.HIGH)
+	if (pin == 2):
+		GPIO.output(24,GPIO.HIGH)
+
+#Turning LED off
+def LEDOff(pin):
+        if (pin == 0):
+                GPIO.output(22,GPIO.LOW)
+        if (pin == 1):
+                GPIO.output(23,GPIO.LOW)
+        if (pin == 2):
+                GPIO.output(24,GPIO.LOW)
+
 
 # Logic that you write
 def main():
