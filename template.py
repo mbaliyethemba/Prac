@@ -51,6 +51,15 @@ def button():
 		time.sleep(.2)
 	return
 
+def led(count):
+	binS = bin(count)[2:].zfill(3)
+	for index, value in enumerate(binS):
+		if (value == '1'):
+			LEDOn(index)
+		else:
+			LEDOff(index)
+	return
+
 # Logic that you write
 def main():
     print("write your logic here")
