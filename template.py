@@ -29,6 +29,8 @@ GPIO.setup(24,GPIO.LOW)  #LED3
 GPIO.setup(23,GPIO.LOW)  #LED2
 GPIO.setup(22,GPIO.LOW)  #LED1
 
+counter = 0;
+
 # Logic that you write
 def main():
     print("write your logic here")
